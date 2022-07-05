@@ -1,38 +1,66 @@
-# create-svelte
+<p align="center"><img src="https://apexcharts.com/media/apexcharts-logo.png"></p>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<p align="center">
+  <a href="https://github.com/apexcharts/react-apexcharts/blob/master/LICENSE"><img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" alt="License"></a>
 
-## Creating a project
+<p align="center">Svelte wrapper for <a href="https://github.com/apexcharts/apexcharts.js">ApexCharts</a> to build interactive visualizations in svelte.</p>
 
-If you're seeing this, you've probably already done this step. Congrats!
+<p align="center"><a href="https://apexcharts.com/react-chart-demos/"><img src="https://apexcharts.com/media/apexcharts-banner.png"></a></p>
 
-```bash
-# create a new project in the current directory
-npm init svelte
+## Download and Installation
 
-# create a new project in my-app
-npm init svelte my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+##### Installing via npm
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm install @bn3t/svelte-apexcharts apexcharts
 ```
 
-## Building
+## Usage
 
-To create a production version of your app:
+The interface of this component is similar to the interface used in the react-apexcharts implementation.
+More specifically there are an `options` and a `series` properties which can be used separatly.
 
-```bash
-npm run build
+The global `ApexCharts` object is exposed by this library which allows to call ApexCharts methods directly.
+
+```ts
+import ApexChart, { ApexCharts } from '@bn3t/svelte-apexcharts';
+import type { SvelteApexOptions, SvelteApexSeries } from '@bn3t/svelte-apexcharts';
 ```
 
-You can preview the production build with `npm run preview`.
+To create a basic bar chart with minimal configuration, write as follows:
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```ts
+<script lang="ts">
+  import ApexChart from '$lib';
+  import type { SvelteApexOptions, SvelteApexSeries } from '$lib';
+
+  let animate = true;
+
+  let series: SvelteApexSeries = [
+    {
+      name: 'series-1',
+      data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
+    }
+  ];
+
+  let options: SvelteApexOptions = {
+    chart: {
+      id: 'apexchart-example'
+    },
+    xaxis: {
+      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+    }
+  };
+</script>
+
+<div class="root">
+  <ApexChart {options} {series} {animate} />
+</div>
+
+<style>
+  .root {
+    width: 100%;
+    height: 400px;
+  }
+</style>
+```

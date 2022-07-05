@@ -1,6 +1,6 @@
 <script lang="ts">
-  import ApexChart, { ApexCharts } from '$lib/ApexChart.svelte';
-  import type { SvelteApexOptions, SvelteApexSeries } from '$lib/types';
+  import ApexChart, { ApexCharts } from '$lib';
+  import type { SvelteApexOptions, SvelteApexSeries } from '$lib';
 
   let show = true;
   let animate = true;
