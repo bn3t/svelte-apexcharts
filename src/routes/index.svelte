@@ -115,7 +115,7 @@
 <button on:click={toggleSeries}>Toggle Series</button>
 <button on:click={toggleOptions}>Toggle Options</button>
 <button on:click={callCustom}>Call custom</button>
-<input type="checkbox" id="animate" name="animate" bind:checked={animate} /><label for="anminate"
+<input type="checkbox" id="animate" name="animate" bind:checked={animate} /><label for="animate"
   >Animate</label
 >
 
