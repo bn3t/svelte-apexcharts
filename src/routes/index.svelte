@@ -85,7 +85,7 @@
   let currentSeries: SvelteApexSeries = series1;
   let currentOptions: SvelteApexOptions = options1;
 
-  const handleHide = () => (show = false);
+  const toggleShowChart = () => (show = !show);
   const handleShow = () => (show = true);
   const toggleSeries = () => (currentSeries = currentSeries === series1 ? series2 : series1);
   const toggleOptions = () => (currentOptions = currentOptions === options1 ? options2 : options1);
@@ -110,7 +110,7 @@
     <ApexChart options={currentOptions} series={currentSeries} {animate} />
   {/if}
 </div>
-<button on:click={handleHide}>Hide chart</button>
+<button on:click={toggleShowChart}>Toggle chart visibility</button>
 <button on:click={handleShow}>Show chart</button>
 <button on:click={toggleSeries}>Toggle Series</button>
 <button on:click={toggleOptions}>Toggle Options</button>
