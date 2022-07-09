@@ -64,3 +64,19 @@ To create a basic bar chart with minimal configuration, write as follows:
   }
 </style>
 ```
+
+# Project Management
+
+## Development lifecycle
+
+```
+$ npm run dev # Run sveltkit application in dev mode
+```
+
+## How to publish to npm
+
+```
+$ npm run package
+$ cd package
+$ npm publish
+```
