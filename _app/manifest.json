@@ -1,17 +1,18 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-9e086cc9.js",
+    "file": "immutable/start-1466b3ad.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-61f7faf2.js",
+      "_paths-1c47712a.js",
       "_preload-helper-f3df5ee0.js"
     ],
     "dynamicImports": [
       "src/routes/__layout.svelte",
       ".svelte-kit/runtime/components/error.svelte",
-      "src/routes/index.svelte",
-      "src/routes/simple/index.svelte"
+      "src/routes/complex/index.svelte",
+      "src/routes/index.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -32,36 +33,40 @@
       "_index-61f7faf2.js"
     ]
   },
+  "src/routes/complex/index.svelte": {
+    "file": "immutable/pages/complex/index.svelte-3141e59b.js",
+    "src": "src/routes/complex/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-61f7faf2.js",
+      "_ApexChart-3da0db71.js",
+      "_preload-helper-f3df5ee0.js"
+    ],
+    "css": [
+      "immutable/assets/pages/complex/index.svelte-5ab87ede.css"
+    ]
+  },
   "src/routes/index.svelte": {
-    "file": "immutable/pages/index.svelte-130f6672.js",
+    "file": "immutable/pages/index.svelte-923733b8.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-61f7faf2.js",
       "_ApexChart-3da0db71.js",
+      "_paths-1c47712a.js",
       "_preload-helper-f3df5ee0.js"
     ],
     "css": [
-      "immutable/assets/pages/index.svelte-a9b4d8bb.css"
-    ]
-  },
-  "src/routes/simple/index.svelte": {
-    "file": "immutable/pages/simple/index.svelte-b797e213.js",
-    "src": "src/routes/simple/index.svelte",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_index-61f7faf2.js",
-      "_ApexChart-3da0db71.js",
-      "_preload-helper-f3df5ee0.js"
-    ],
-    "css": [
-      "immutable/assets/pages/index.svelte-a9b4d8bb.css"
+      "immutable/assets/pages/index.svelte-ea5d0682.css"
     ]
   },
   "_index-61f7faf2.js": {
     "file": "immutable/chunks/index-61f7faf2.js"
+  },
+  "_paths-1c47712a.js": {
+    "file": "immutable/chunks/paths-1c47712a.js"
   },
   "_preload-helper-f3df5ee0.js": {
     "file": "immutable/chunks/preload-helper-f3df5ee0.js"

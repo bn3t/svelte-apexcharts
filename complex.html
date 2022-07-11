@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Example application for svelte-apexcharts" />
     <meta http-equiv="content-security-policy" content=""><title>Example application for svelte-apexcharts</title>
-	<link rel="stylesheet" href="/svelte-apexcharts/_app/immutable/assets/pages/index.svelte-a9b4d8bb.css">
+	<link rel="stylesheet" href="/svelte-apexcharts/_app/immutable/assets/pages/complex/index.svelte-5ab87ede.css">
 	<link rel="stylesheet" href="/svelte-apexcharts/_app/immutable/assets/ApexChart-9902ffe5.css">
-	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/start-9e086cc9.js">
+	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/start-1466b3ad.js">
 	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/chunks/index-61f7faf2.js">
+	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/chunks/paths-1c47712a.js">
 	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/chunks/preload-helper-f3df5ee0.js">
 	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/pages/__layout.svelte-5aad525b.js">
-	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/pages/simple/index.svelte-b797e213.js">
+	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/pages/complex/index.svelte-3141e59b.js">
 	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/chunks/ApexChart-3da0db71.js">
   </head>
   <body>
@@ -20,14 +21,18 @@
 
 
 
-<main><div class="root svelte-11nso26"><div class="container svelte-12w2063"></div>
-</div></main>
+<main><div class="root svelte-11nso26"><div class="container svelte-12w2063"></div></div>
+<button>Toggle chart visibility</button>
+<button>Toggle Series</button>
+<button>Toggle Options</button>
+<button>Call custom</button>
+<input type="checkbox" id="animate" name="animate" checked><label for="animate">Animate</label></main>
 
 
-		<script type="module" data-sveltekit-hydrate="owpnic">
-		import { start } from "/svelte-apexcharts/_app/immutable/start-9e086cc9.js";
+		<script type="module" data-sveltekit-hydrate="10q24ow">
+		import { start } from "/svelte-apexcharts/_app/immutable/start-1466b3ad.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="owpnic"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="10q24ow"]').parentNode,
 			paths: {"base":"/svelte-apexcharts","assets":"/svelte-apexcharts"},
 			session: {},
 			route: true,
@@ -36,9 +41,9 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 3],
+				nodes: [0, 2],
 				params: {},
-				routeId: "simple"
+				routeId: "complex"
 			}
 		});
 	</script></div>
