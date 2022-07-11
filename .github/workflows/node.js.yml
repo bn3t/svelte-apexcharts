@@ -5,13 +5,12 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ['master']
   pull_request:
-    branches: [ "master" ]
+    branches: ['master']
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -19,16 +18,20 @@ jobs:
         node-version: [16.x]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - name: Run npm install
-      run: npm ci
-    - run: npm run build
-    - name: Install Playwright
-      run: npx playwright install --with-deps
-    - name: Run playwright tests
-      run: npm run test
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Run npm install
+        run: npm ci
+      - run: npm run build
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      - name: Run playwright tests
+        run: npm run test
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
