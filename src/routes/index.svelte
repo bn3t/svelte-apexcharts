@@ -1,127 +1,35 @@
 <script lang="ts">
-  import ApexChart, { ApexCharts } from '$lib';
+  import ApexChart from '$lib';
+  import { base } from '$app/paths';
   import type { SvelteApexOptions, SvelteApexSeries } from '$lib';
 
-  let show = true;
   let animate = true;
 
-  let series1: SvelteApexSeries = [
+  let series: SvelteApexSeries = [
     {
-      name: 'Desktops',
-      data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+      name: 'series-1',
+      data: [30, 40, 35, 50, 49, 60, 70, 91, 125]
     }
   ];
 
-  let series2: SvelteApexSeries = [
-    {
-      name: 'series1',
-      data: [31, 40, 28, 51, 42, 109, 100]
-    },
-    {
-      name: 'series2',
-      data: [11, 32, 45, 32, 34, 52, 41]
-    }
-  ];
-
-  let options1: SvelteApexOptions = {
+  let options: SvelteApexOptions = {
     chart: {
-      id: 'chart1',
-      height: '100%',
-      type: 'line',
-      zoom: {
-        enabled: false
-      }
-    },
-    dataLabels: {
-      enabled: false
-    },
-    stroke: {
-      curve: 'straight'
-    },
-    title: {
-      text: 'Product Trends by Month',
-      align: 'left'
-    },
-    grid: {
-      row: {
-        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-        opacity: 0.5
-      }
+      id: 'apexchart-example'
     },
     xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
-    }
-  };
-  let options2: SvelteApexOptions = {
-    chart: {
-      id: 'chart1',
-      height: '100%',
-      type: 'area',
-      zoom: {
-        enabled: false
-      }
-    },
-    dataLabels: {
-      enabled: false
-    },
-    stroke: {
-      curve: 'smooth'
-    },
-    title: {
-      text: 'Product Trends by Month',
-      align: 'left'
-    },
-    grid: {
-      row: {
-        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-        opacity: 0.5
-      }
-    },
-    xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
-    }
-  };
-
-  let currentSeries: SvelteApexSeries = series1;
-  let currentOptions: SvelteApexOptions = options1;
-
-  const toggleShowChart = () => (show = !show);
-  const handleShow = () => (show = true);
-  const toggleSeries = () => (currentSeries = currentSeries === series1 ? series2 : series1);
-  const toggleOptions = () => (currentOptions = currentOptions === options1 ? options2 : options1);
-  const callCustom = () => {
-    if (ApexCharts !== undefined) {
-      ApexCharts.exec(
-        'chart1',
-        'updateSeries',
-        [
-          {
-            data: [32, 44, 31, 41, 22]
-          }
-        ],
-        animate
-      );
+      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
     }
   };
 </script>
 
 <div class="root">
-  {#if show}
-    <ApexChart options={currentOptions} series={currentSeries} {animate} />
-  {/if}
+  <ApexChart {options} {series} {animate} />
 </div>
-<button on:click={toggleShowChart}>Toggle chart visibility</button>
-<button on:click={handleShow}>Show chart</button>
-<button on:click={toggleSeries}>Toggle Series</button>
-<button on:click={toggleOptions}>Toggle Options</button>
-<button on:click={callCustom}>Call custom</button>
-<input type="checkbox" id="animate" name="animate" bind:checked={animate} /><label for="animate"
-  >Animate</label
->
+<div><a href="{base}/complex" alt="Access a more complex example">A more complex example</a></div>
 
 <style>
   .root {
     width: 100%;
-    height: 400px;
+    height: 800px;
   }
 </style>

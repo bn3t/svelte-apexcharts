@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-const ROOT_URL = '/svelte-apexcharts/';
+const ROOT_URL = '/svelte-apexcharts/complex';
 
 test.describe('Chart Manipulation', () => {
   test('A chart is displayed', async ({ page }) => {
