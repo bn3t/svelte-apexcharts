@@ -1,6 +1,7 @@
 <script lang="ts">
   import ApexChart, { ApexCharts } from '$lib';
   import type { SvelteApexOptions, SvelteApexSeries } from '$lib';
+  import { base } from '$app/paths';
 
   let show = true;
   let animate = true;
@@ -104,6 +105,11 @@
   };
 </script>
 
+<div>
+  <a href="{base}/" alt="Access a more complex example">
+    <button>Back to the simple example</button>
+  </a>
+</div>
 <div class="root">
   {#if show}
     <ApexChart options={currentOptions} series={currentSeries} {animate} />
@@ -113,9 +119,7 @@
 <button on:click={toggleSeries}>Toggle Series</button>
 <button on:click={toggleOptions}>Toggle Options</button>
 <button on:click={callCustom}>Call custom</button>
-<input type="checkbox" id="animate" name="animate" bind:checked={animate} /><label for="animate"
-  >Animate</label
->
+<label><input type="checkbox" bind:checked={animate} />Animate</label>
 
 <style>
   .root {
