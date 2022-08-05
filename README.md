@@ -5,11 +5,11 @@
 
 <p align="center">Svelte wrapper for <a href="https://github.com/apexcharts/apexcharts.js">ApexCharts</a> to build interactive visualizations in svelte.</p>
 
-<p align="center"><a href="https://apexcharts.com/react-chart-demos/"><img src="https://apexcharts.com/media/apexcharts-banner.png"></a></p>
+<p align="center"><a href="https://bn3t.github.io/svelte-apexcharts"><img src="https://apexcharts.com/media/apexcharts-banner.png"></a></p>
 
 ## Download and Installation
 
-##### Installing via npm
+##### Install via npm
 
 ```bash
 npm install @bn3t/svelte-apexcharts apexcharts
@@ -17,8 +17,10 @@ npm install @bn3t/svelte-apexcharts apexcharts
 
 ## Usage
 
-The interface of this component is similar to the interface used in the react-apexcharts implementation.
-More specifically there are an `options` and a `series` properties which can be used separatly.
+The interface of this component is similar to the interface used in the
+[react-apexcharts](https://apexcharts.com/docs/react-charts/) implementation.
+More specifically there is an `options` and a `series` properties which can be used separatly.
+Also, this library is compatible with SvelteKit.
 
 The global `ApexCharts` object is exposed by this library which allows to call ApexCharts methods directly.
 
@@ -65,7 +67,7 @@ To create a basic bar chart with minimal configuration, write as follows:
 </style>
 ```
 
-# Project Management
+# Development
 
 ## Development lifecycle
 

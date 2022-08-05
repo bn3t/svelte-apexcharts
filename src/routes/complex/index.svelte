@@ -105,11 +105,6 @@
   };
 </script>
 
-<div>
-  <a href="{base}/" alt="Access a more complex example">
-    <button>Back to the simple example</button>
-  </a>
-</div>
 <div class="root">
   {#if show}
     <ApexChart options={currentOptions} series={currentSeries} {animate} />
