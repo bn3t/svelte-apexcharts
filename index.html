@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Example application for @bn3t/svelte-apexcharts" />
     <meta http-equiv="content-security-policy" content=""><title>Example application for @bn3t/svelte-apexcharts</title>
-	<link rel="stylesheet" href="/svelte-apexcharts/_app/immutable/assets/pages/__layout.svelte-1b3e29d9.css">
-	<link rel="stylesheet" href="/svelte-apexcharts/_app/immutable/assets/pages/index.svelte-298db3ed.css">
-	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/start-1287d300.js">
-	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/chunks/index-29e6b9a6.js">
-	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/chunks/paths-1c47712a.js">
-	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/chunks/preload-helper-f3df5ee0.js">
-	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/pages/__layout.svelte-60b626a2.js">
-	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/pages/index.svelte-365d4d8b.js">
+	<link href="/svelte-apexcharts/_app/immutable/assets/+layout-e5f384d9.css" rel="stylesheet">
+	<link href="/svelte-apexcharts/_app/immutable/assets/+page-52deab77.css" rel="stylesheet">
+	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/start-e5efbb95.js">
+	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/chunks/index-26643472.js">
+	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/chunks/paths-6cd3a76e.js">
+	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/chunks/preload-helper-e1610492.js">
+	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/components/pages/_layout.svelte-0484d70f.js">
+	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/chunks/stores-1a2ac6ff.js">
+	<link rel="modulepreload" href="/svelte-apexcharts/_app/immutable/components/pages/_page.svelte-25bd4abd.js">
   </head>
   <body>
     
@@ -78,7 +79,10 @@ Also, this library is compatible with SvelteKit.</p><p>The global <code>ApexChar
 
 
 		<script type="module" data-sveltekit-hydrate="14t5s1c">
-		import { start } from "/svelte-apexcharts/_app/immutable/start-1287d300.js";
+		import { set_public_env, start } from "/svelte-apexcharts/_app/immutable/start-e5efbb95.js";
+
+		set_public_env({});
+
 		start({
 			target: document.querySelector('[data-sveltekit-hydrate="14t5s1c"]').parentNode,
 			paths: {"base":"/svelte-apexcharts","assets":"/svelte-apexcharts"},
@@ -89,11 +93,12 @@ Also, this library is compatible with SvelteKit.</p><p>The global <code>ApexChar
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 3],
+				node_ids: [0, 2],
 				params: {},
 				routeId: ""
 			}
 		});
 	</script>
+	
   </body>
 </html>
