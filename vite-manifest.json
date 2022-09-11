@@ -1,6 +1,6 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-e2d5f9a2.js",
+    "file": "_app/immutable/start-514932b4.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -163,20 +163,20 @@
     "file": "_app/immutable/assets/+layout-e5f384d9.css",
     "src": "src/routes/+layout.css"
   },
-  "src/routes/simple/+page.css": {
-    "file": "_app/immutable/assets/+page-42b326c2.css",
-    "src": "src/routes/simple/+page.css"
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/+page-52deab77.css",
+    "src": "src/routes/+page.css"
   },
   "ApexChart.css": {
     "file": "_app/immutable/assets/ApexChart-d6556e8a.css",
     "src": "ApexChart.css"
   },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/+page-52deab77.css",
-    "src": "src/routes/+page.css"
-  },
   "src/routes/complex/+page.css": {
     "file": "_app/immutable/assets/+page-4d809a95.css",
     "src": "src/routes/complex/+page.css"
+  },
+  "src/routes/simple/+page.css": {
+    "file": "_app/immutable/assets/+page-42b326c2.css",
+    "src": "src/routes/simple/+page.css"
   }
 }
