@@ -1,7 +1,6 @@
 <script lang="ts">
   import ApexChart, { ApexCharts } from '$lib';
   import type { SvelteApexOptions, SvelteApexSeries } from '$lib';
-  import { base } from '$app/paths';
 
   let show = true;
   let animate = true;
