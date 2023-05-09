@@ -1,3 +1,5 @@
+This project is archived and I will not work on it anymore as I don't continue with Svelte.
+
 <p align="center"><img src="https://apexcharts.com/media/apexcharts-logo.png"></p>
 
 <p align="center">
@@ -8,12 +10,6 @@
 <p align="center"><a href="https://bn3t.github.io/svelte-apexcharts"><img src="https://apexcharts.com/media/apexcharts-banner.png"></a></p>
 
 ## Download and Installation
-
-##### Install via npm
-
-```bash
-npm install @bn3t/svelte-apexcharts apexcharts
-```
 
 ## Usage
 
